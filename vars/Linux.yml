@@ -1,0 +1,4 @@
+---
+# vars file for boundary in Linux system
+default_boundary_cli_pkg_url: "https://releases.hashicorp.com/boundary/{{ boundary_cli_version_to_install }}/boundary_{{ boundary_cli_version_to_install }}_linux_{{ base_arch[ansible_architecture] | default('amd64') }}.zip"
+default_boundary_cli_bin_directory: /usr/local/bin/

@@ -1,4 +1,5 @@
 ---
 - hosts: localhost
+  remote_user: root
   roles:
-    - diodonfrost.boundary_client
+    - diodonfrost.boundary

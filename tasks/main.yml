@@ -1,2 +1,22 @@
 ---
-# tasks file for boundary_client
+# tasks file for ansible-role-boundary
+
+- name: Include OS specific variables.
+  ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_system }}.yml"
+        - Linux.yml
+      paths:
+        - 'vars'
+
+- name: Install Hashicorp Boundary cli
+  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_system }}.yml"
+        - setup-Linux-Unix.yml
+      paths:
+        - 'tasks/cli-install'

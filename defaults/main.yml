@@ -1,2 +1,19 @@
 ---
-# defaults file for boundary_client
+# defaults file for diodonfrost.boundary
+
+# Install boundary cli
+# Default: true
+install_cli: true
+
+# Define boundary cli version to install
+# Possible values: https://releases.hashicorp.com/boundary/index.json
+# Default: latest
+boundary_cli_version: latest
+
+# Define where to download boundary cli package url
+# Default: use local system path defined in Ansible vars/*.yml
+boundary_cli_pkg_url: "{{ default_boundary_cli_pkg_url }}"
+
+# Define where to install boundary cli binary
+# Default: use local system path defined in Ansible vars/*.yml
+boundary_cli_bin_directory: "{{ default_boundary_cli_bin_directory }}"
