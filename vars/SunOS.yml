@@ -1,0 +1,4 @@
+---
+# vars file for boundary in SunOS system
+default_boundary_cli_pkg_url: "https://releases.hashicorp.com/boundary/{{ boundary_cli_version_to_install }}/boundary_{{ boundary_cli_version_to_install }}_solaris_amd64.zip"
+default_boundary_cli_bin_directory: /usr/sbin
